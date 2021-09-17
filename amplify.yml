@@ -1,0 +1,28 @@
+version: 1
+backend:
+  phases:   
+    preBuild:
+      commands:
+        - npm install -g aws-cdk
+        - cd cdk-infra
+        - npm ci
+    build:
+      commands:        
+        - cdk deploy        
+        - cd ..
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd web-app
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: web-app/build
+    files:
+        - '**/*' 
+  cache:
+    paths:
+        - web-app/node_modules/**/*       

@@ -1,0 +1,14 @@
+{
+  "name": "react-cdk-amplify-proba",
+  "version": "1.0.0",
+  "description": "This is a test app.",
+  "scripts": {
+    "buildwebapp": "cd webApp && npm i && npm run build && cd ../",
+    "buildcdk": "cd cdkInfra && npm i && npm run build && cd ../",
+    "build": "npm run buildwebapp && npm run buildcdk",
+    "deploy": "npm run build && cd cdkInfra && npm run deploy",
+    "test": "echo \"no ci/cd tests setup\""
+  },
+  "author": "",
+  "license": "ISC"
+}
