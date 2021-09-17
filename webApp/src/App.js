@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     //paste here after you deploy de cdk infra
-    const url = "https://f7go511t91.execute-api.eu-west-1.amazonaws.com/prod/"
+    const url = ""
     fetch(url)
       .then(response => response.json())
       .then(data => setMessage(JSON.stringify(data)))
