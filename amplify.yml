@@ -8,7 +8,7 @@ backend:
         - npm ci
     build:
       commands:        
-        - cdk deploy        
+        - cdk deploy --require-approval never
         - cd ..
 frontend:
   phases:
@@ -26,4 +26,3 @@ frontend:
   cache:
     paths:
         - webApp/node_modules/**/*       
-        
