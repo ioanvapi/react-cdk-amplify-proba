@@ -4,7 +4,7 @@ backend:
     preBuild:
       commands:
         - npm install -g aws-cdk
-        - cd cdk-infra
+        - cd cdkInfra
         - npm ci
     build:
       commands:        
@@ -14,15 +14,16 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd web-app
+        - cd webApp
         - npm ci
     build:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: web-app/build
+    baseDirectory: webApp/build
     files:
         - '**/*' 
   cache:
     paths:
-        - web-app/node_modules/**/*       
+        - webApp/node_modules/**/*       
+        
