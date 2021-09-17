@@ -6,7 +6,7 @@
     "buildwebapp": "cd webApp && npm i && npm run build && cd ../",
     "buildcdk": "cd cdkInfra && npm i && npm run build && cd ../",
     "build": "npm run buildwebapp && npm run buildcdk",
-    "deploy": "npm run build && cd cdkInfra && npm run deploy",
+    "deploy": "npm run build && cd cdkInfra && npm run deploy --require-approval never",
     "test": "echo \"no ci/cd tests setup\""
   },
   "author": "",
